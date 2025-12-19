@@ -9,3 +9,6 @@ elseif vim.loop.os_uname().sysname == "Windows_NT" then
   vim.g.python_host_prog = "%USERPROFILE%\\.uv\\nvim\\.venv\\bin\\python"
   vim.g.python3_host_prog = "%USERPROFILE%\\.uv\\nvim\\.venv\\bin\\python"
 end
+
+-- visual 模式下，按 Ctrl+c 直接复制到系统剪切板
+vim.keymap.set('v', '<C-c>', '"+y')
